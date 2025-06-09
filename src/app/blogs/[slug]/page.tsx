@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostJsonLd) }} />
             <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-            <TracingBeam className='px-4'>
+            <TracingBeam className='px-6 md:px-4'>
                 <article className='container mx-auto max-w-4xl py-8'>
                     {/* Header */}
                     <header className='mb-8'>
