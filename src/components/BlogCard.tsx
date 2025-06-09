@@ -24,11 +24,11 @@ export function BlogCard({ post }: { post: BlogPost }) {
     const authorAvatar = post.metadata?.avatar || '/images/circleavatar.webp';
 
     return (
-        <div className='group/card w-full max-w-xs'>
+        <div className='group/card w-full sm:max-w-xs md:max-w-sm lg:max-w-md'>
             <Link href={`/blogs/${post.slug}`} className='block'>
                 <div
                     className={cn(
-                        'card relative mx-auto flex h-96 max-w-sm cursor-pointer flex-col justify-between overflow-hidden rounded-md p-4 shadow-xl',
+                        'card relative mx-auto flex h-96 w-full cursor-pointer flex-col justify-between overflow-hidden rounded-md p-4 shadow-xl sm:h-80 md:h-96',
                         post.image ? 'bg-cover' : 'bg-gray-800'
                     )}
                     style={post.image ? { backgroundImage: `url(${imagePath})` } : {}}>

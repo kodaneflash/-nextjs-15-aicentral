@@ -51,7 +51,7 @@ export function BlogCarouselClient({
                         <CarouselItem
                             key={post.slug}
                             className='flex basis-full justify-center sm:basis-auto md:min-w-[350px] lg:justify-start'>
-                            <div className='h-full w-full max-w-[350px] px-2 lg:w-auto lg:max-w-none'>
+                            <div className='h-full w-full px-2 sm:max-w-[350px] md:max-w-[380px] lg:w-auto lg:max-w-none'>
                                 <BlogCard post={post} />
                             </div>
                         </CarouselItem>
