@@ -20,21 +20,19 @@ export function Hero({ className = '' }: HeroProps) {
                                             <div className='px-2 pt-8 font-light sm:pt-12 md:pt-16'>
                                                 <div>
                                                     <GradientHeading
-                                                        asChild
-                                                        variant='bright'
+                                                        variant='pink'
                                                         size='xxl'
                                                         weight='thin'
                                                         className='py-1 tracking-wide sm:py-2'>
-                                                        <h1>Enim</h1>
+                                                        Enim
                                                     </GradientHeading>
 
                                                     <GradientHeading
-                                                        asChild
-                                                        variant='bright'
+                                                        variant='pink'
                                                         size='xxl'
                                                         weight='thin'
                                                         className='py-1 leading-tight tracking-wide sm:py-2'>
-                                                        <h2>Dolore</h2>
+                                                        Dolore
                                                     </GradientHeading>
                                                 </div>
                                             </div>

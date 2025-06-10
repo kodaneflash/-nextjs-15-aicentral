@@ -5,7 +5,7 @@ import * as React from 'react';
 import { GradientHeading, Size, Variant, Weight } from './gradient-heading';
 
 export function GradientHeadingDemo() {
-    const variants: Variant[] = ['default', 'pink', 'light', 'bright'];
+    const variants: Variant[] = ['default', 'pink', 'light'];
     const sizes: Size[] = ['lg', 'xl', 'xxl', 'xxxl'];
     const weights: Weight[] = ['thin', 'base', 'semi', 'bold', 'black'];
 

@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -12,8 +10,7 @@ const headingVariants = cva('tracking-tight pb-3 bg-clip-text text-transparent',
         variant: {
             default: 'bg-gradient-to-t from-neutral-700 to-neutral-800 dark:from-stone-200 dark:to-neutral-200',
             pink: 'bg-gradient-to-t from-accent to-accent/90 dark:from-stone-200 dark:to-neutral-200',
-            light: 'bg-gradient-to-t from-neutral-200 to-neutral-300 dark:from-neutral-100 dark:to-white',
-            bright: 'bg-gradient-to-t from-white to-neutral-100 dark:from-white dark:to-neutral-100',
+            light: 'bg-gradient-to-t from-neutral-200 to-neutral-300',
             secondary: 'bg-gradient-to-t from-neutral-500 to-neutral-600 dark:from-stone-200 dark:to-neutral-200'
         },
         size: {
@@ -64,7 +61,7 @@ const GradientHeading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
 GradientHeading.displayName = 'GradientHeading';
 
 // Manually define the variant types
-export type Variant = 'default' | 'pink' | 'light' | 'bright' | 'secondary';
+export type Variant = 'default' | 'pink' | 'light' | 'secondary';
 export type Size = 'default' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 export type Weight = 'default' | 'thin' | 'base' | 'semi' | 'bold' | 'black';
 
