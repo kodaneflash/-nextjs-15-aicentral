@@ -1,3 +1,5 @@
+import { GradientHeading } from './ui/gradient-heading';
+
 interface HeroProps {
     className?: string;
 }
@@ -17,36 +19,28 @@ export function Hero({ className = '' }: HeroProps) {
                                         <div>
                                             <div className='px-2 pt-8 font-light sm:pt-12 md:pt-16'>
                                                 <div>
-                                                    <div className='inline-block py-1 text-4xl tracking-wide sm:py-2 sm:text-5xl lg:text-6xl xl:text-7xl'>
-                                                        <div className='flex flex-wrap justify-start'>
-                                                            {['V', 'i', 'b', 'e'].map((letter, index) => (
-                                                                <span
-                                                                    key={index}
-                                                                    className='cursor-pointer text-center'>
-                                                                    <span>{letter}</span>
-                                                                </span>
-                                                            ))}
-                                                        </div>
-                                                    </div>
+                                                    <GradientHeading
+                                                        asChild
+                                                        variant='bright'
+                                                        size='xxl'
+                                                        weight='thin'
+                                                        className='py-1 tracking-wide sm:py-2'>
+                                                        <h1>Enim</h1>
+                                                    </GradientHeading>
 
-                                                    <div className='inline-block py-1 text-3xl leading-tight tracking-wide sm:py-2 sm:text-4xl lg:text-5xl xl:text-6xl'>
-                                                        <div className='flex flex-wrap justify-start'>
-                                                            {['M', 'a', 'r', 'k', 'e', 't', 'i', 'n', 'g'].map(
-                                                                (letter, index) => (
-                                                                    <span
-                                                                        key={index}
-                                                                        className='cursor-pointer text-center'>
-                                                                        <span>{letter}</span>
-                                                                    </span>
-                                                                )
-                                                            )}
-                                                        </div>
-                                                    </div>
+                                                    <GradientHeading
+                                                        asChild
+                                                        variant='bright'
+                                                        size='xxl'
+                                                        weight='thin'
+                                                        className='py-1 leading-tight tracking-wide sm:py-2'>
+                                                        <h2>Dolore</h2>
+                                                    </GradientHeading>
                                                 </div>
                                             </div>
 
                                             <p className='pb-6 text-base leading-relaxed font-light text-zinc-300 sm:text-lg lg:text-xl'>
-                                                Get your brand to the next level with our Vibe Marketing platform.
+                                                Irure officia occaecat fugiat.
                                             </p>
 
                                             <div className='flex flex-col gap-4 px-2 sm:flex-row sm:justify-start sm:gap-6 lg:gap-8'>
@@ -65,7 +59,7 @@ export function Hero({ className = '' }: HeroProps) {
                                                             background: 'oklab(0.145 0 0 / 0.8)'
                                                         }}>
                                                         <span className='flex items-center gap-2'>
-                                                            Enter the vibe
+                                                            Minim enim
                                                             <svg
                                                                 className='h-5 w-5 sm:h-6 sm:w-6'
                                                                 fill='none'
