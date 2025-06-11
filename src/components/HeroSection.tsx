@@ -5,6 +5,7 @@ import React, { FormEvent, useState } from 'react';
 import { useNewsletterSubscription } from '@/hooks/useNewsletterSubscription';
 import { cn } from '@/lib/utils';
 
+import { AvatarCirclesDemo } from './AvatarCirclesDemo';
 import { BlurImage } from './ui/fullbackgroundimage';
 import { AlertCircle, CheckCircle, Loader2, Mail } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -157,6 +158,11 @@ export function HeroSection({
                             )}
                         </motion.div>
                     )}
+                </div>
+
+                {/* Avatar Circles */}
+                <div className='mt-8'>
+                    <AvatarCirclesDemo />
                 </div>
             </div>
         </section>
