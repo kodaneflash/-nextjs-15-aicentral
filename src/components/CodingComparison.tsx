@@ -25,15 +25,15 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, items, variant, 
                 {icon}
             </div>
 
-            <ul className='space-y-4'>
+            <ul className='space-y-3 sm:space-y-4'>
                 {items.map((item, index) => (
-                    <li key={index} className='flex items-start gap-3'>
+                    <li key={index} className='flex items-start gap-2 sm:gap-3'>
                         <span
-                            className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full ${
+                            className={`mt-[0.375rem] h-1.5 w-1.5 flex-shrink-0 rounded-full ${
                                 isEmployee ? 'bg-red-400' : 'bg-green-400'
                             }`}
                         />
-                        <span className='leading-relaxed text-gray-300'>{item}</span>
+                        <span className='text-sm leading-relaxed text-gray-300 sm:text-base'>{item}</span>
                     </li>
                 ))}
             </ul>
