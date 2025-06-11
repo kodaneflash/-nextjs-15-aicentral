@@ -1,31 +1,11 @@
 import BlogCarousel from '@/components/BlogCarousel';
 import { CodingComparison } from '@/components/CodingComparison';
 import { ContentSection } from '@/components/ContentSection';
-import { type CourseCard, CourseCards } from '@/components/CourseCards';
 import { HeroSection } from '@/components/HeroSection';
+import { CourseCardsDemo } from '@/components/examples/CourseCardsDemo';
+import { InfiniteMovingCardsDemo } from '@/components/infinite-moving-cards-demo';
 import { Pricing } from '@/components/pricing';
 import type { PricingPlan } from '@/components/pricing';
-import { TestimonialsDemo } from '@/components/testimonials-demo';
-
-// Course data
-const courses: CourseCard[] = [
-    {
-        id: 'ai-coding-basics',
-        title: 'AI coding<br />Beyond basics',
-        description: 'The ultimate Vibe Coding Guideline<br />to bring ideas to production',
-        buttonText: 'Enroll now',
-        videoUrl: 'https://www.aibuilderclub.com/3_learning/course1.mp4',
-        buttonHref: '#'
-    },
-    {
-        id: 'production-agent',
-        title: 'Build<br />Production<br />Agent',
-        description: 'No framework, just build from scratch',
-        buttonText: 'Get Started',
-        videoUrl: 'https://www.aibuilderclub.com/3_learning/course2.mp4',
-        buttonHref: '#'
-    }
-];
 
 // Pricing plans data
 const pricingPlans: PricingPlan[] = [
@@ -104,17 +84,11 @@ export default function Page() {
                 <ContentSection />
 
                 {/* Testimonials with Marquee Section */}
-                <TestimonialsDemo />
+                <InfiniteMovingCardsDemo />
 
                 {/* Course Cards Section */}
                 <section id='courses' className='mt-16 w-full'>
-                    <div className='mb-8 text-center'>
-                        <h2 className='mb-4 text-3xl font-bold'>Featured Courses</h2>
-                        <p className='text-clean-subtext'>
-                            Discover our premium courses designed to take your skills to the next level.
-                        </p>
-                    </div>
-                    <CourseCards courses={courses} />
+                    <CourseCardsDemo />
                 </section>
 
                 {/* Pricing Section */}

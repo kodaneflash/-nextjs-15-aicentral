@@ -12,9 +12,9 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, items, variant, 
 
     return (
         <div
-            className={`flex flex-col rounded-2xl border ${
+            className={`flex flex-col rounded-2xl border p-6 sm:p-8 ${
                 isEmployee ? 'border-red-500/30 bg-red-950/20' : 'border-green-500/30 bg-green-950/20'
-            } p-6 sm:p-8`}>
+            }`}>
             <div className='mb-6 flex items-center justify-between'>
                 <h3 className={`text-lg font-semibold sm:text-xl ${isEmployee ? 'text-red-400' : 'text-green-400'}`}>
                     {title}
@@ -76,21 +76,25 @@ export function CourseCardsDemo() {
     const entrepreneurItems = ['Learn only the fundamentals', 'Use AI to code for you', 'Keep learning on the fly'];
 
     return (
-        <div className='bg-black px-4 py-8 sm:px-6 sm:py-16'>
-            <div className='mx-auto max-w-md space-y-6 sm:max-w-2xl sm:space-y-8'>
-                <ComparisonCard
-                    title='Coding as an employee'
-                    items={employeeItems}
-                    variant='employee'
-                    icon={<XIcon />}
-                />
+        <div className='w-full'>
+            <div className='from-card via-card/95 to-muted/90 shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark mx-auto max-w-7xl bg-gradient-to-br p-1 md:container'>
+                <div className='bg-card/20 shadow-elevation-light dark:shadow-elevation-dark-three md:dark:shadow-elevation-dark px-4 py-8 sm:px-6 sm:py-16'>
+                    <div className='mx-auto max-w-md space-y-6 sm:max-w-2xl sm:space-y-8'>
+                        <ComparisonCard
+                            title='Coding as an employee'
+                            items={employeeItems}
+                            variant='employee'
+                            icon={<XIcon />}
+                        />
 
-                <ComparisonCard
-                    title='Coding as an entrepreneur'
-                    items={entrepreneurItems}
-                    variant='entrepreneur'
-                    icon={<CheckIcon />}
-                />
+                        <ComparisonCard
+                            title='Coding as an entrepreneur'
+                            items={entrepreneurItems}
+                            variant='entrepreneur'
+                            icon={<CheckIcon />}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );
