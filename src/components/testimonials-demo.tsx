@@ -30,6 +30,7 @@ export function TestimonialsDemo({
             description={description}
             testimonials={testimonials}
             className={className}
+            descriptionClassName='text-clean-subtext'
         />
     );
 }

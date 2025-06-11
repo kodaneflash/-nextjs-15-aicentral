@@ -110,7 +110,7 @@ export default function Page() {
                 <section id='courses' className='mt-16 w-full'>
                     <div className='mb-8 text-center'>
                         <h2 className='mb-4 text-3xl font-bold'>Featured Courses</h2>
-                        <p className='text-lg text-gray-600 dark:text-gray-400'>
+                        <p className='text-clean-subtext'>
                             Discover our premium courses designed to take your skills to the next level.
                         </p>
                     </div>
@@ -123,6 +123,7 @@ export default function Page() {
                         plans={pricingPlans}
                         title='Pricing'
                         subtitle='Choose the perfect plan for your needs. All plans include a 14-day free trial.'
+                        subtitleClassName='text-clean-subtext'
                     />
                 </section>
 

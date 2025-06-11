@@ -33,6 +33,7 @@ export interface PricingProps {
     plans: PricingPlan[];
     className?: string;
     centeredLayout?: boolean;
+    subtitleClassName?: string;
 }
 
 const PricingCard: React.FC<{
@@ -141,7 +142,8 @@ export const Pricing: React.FC<PricingProps> = ({
     subtitle = 'Choose the perfect plan for your needs. All plans include a 14-day free trial.',
     plans,
     className,
-    centeredLayout = true
+    centeredLayout = true,
+    subtitleClassName
 }) => {
     return (
         <div className={cn('w-full', className)}>
@@ -158,7 +160,11 @@ export const Pricing: React.FC<PricingProps> = ({
                                 {title}
                             </GradientHeading>
                         </div>
-                        <p className='text-foreground/80 mx-auto max-w-2xl text-lg leading-relaxed xl:text-xl'>
+                        <p
+                            className={cn(
+                                'text-foreground/80 mx-auto max-w-2xl text-lg leading-relaxed xl:text-xl',
+                                subtitleClassName
+                            )}>
                             {subtitle}
                         </p>
                     </div>

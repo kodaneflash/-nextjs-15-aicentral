@@ -18,40 +18,51 @@ const notoSans = Noto_Sans({
 // Enhanced metadata configuration for better SEO
 export const metadata: Metadata = {
     title: {
-        default: 'Next.js 15 Starter - Modern Web Development',
-        template: '%s | Next.js 15 Starter'
+        default: 'AI Central - Learn AI Coding & Begin Your Solopreneur Journey',
+        template: '%s | AI Central'
     },
     description:
-        'A modern web development blog powered by Next.js 15, featuring insights, tutorials, and best practices for modern web development.',
-    keywords: ['Next.js', 'React', 'TypeScript', 'Web Development', 'Blog', 'Tutorials'],
-    authors: [{ name: 'Your Name' }],
-    creator: 'Your Name',
-    publisher: 'Next.js 15 Starter',
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+        'Everything you need to build your SaaS or any online business—even as a complete beginner. AI Central helps you learn AI coding and AI agents by focusing on the basics that every entrepreneur should know.',
+    keywords: [
+        'AI coding',
+        'AI agents',
+        'SaaS development',
+        'solopreneur',
+        'entrepreneur',
+        'full-stack examples',
+        'AI templates',
+        'business building',
+        'AI learning',
+        'startup tools'
+    ],
+    authors: [{ name: 'AI Central' }],
+    creator: 'AI Central',
+    publisher: 'AI Central',
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.aicentr.al'),
     openGraph: {
         type: 'website',
         locale: 'en_US',
         url: '/',
-        title: 'AI Central - Learn AI Coding & Begin your Soloprenuer Journey',
+        title: 'AI Central - Learn AI Coding & Begin Your Solopreneur Journey',
         description:
-            'A modern web development blog powered by Next.js 15, featuring insights, tutorials, and best practices.',
-        siteName: 'Next.js 15 Starter',
+            'Everything you need to build your SaaS or any online business—even as a complete beginner. Full-stack examples, ready-to-use templates, and easy lessons that let AI do the hard work.',
+        siteName: 'AI Central',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'Next.js 15 Starter - Modern Web Development'
+                alt: 'AI Central - Learn AI Coding & Begin Your Solopreneur Journey'
             }
         ]
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Next.js 15 Starter - Modern Web Development',
+        title: 'AI Central - Learn AI Coding & Begin Your Solopreneur Journey',
         description:
-            'A modern web development blog powered by Next.js 15, featuring insights, tutorials, and best practices.',
+            'Everything you need to build your SaaS or any online business—even as a complete beginner. Join our community of builders and create useful products faster than ever.',
         images: ['/og-image.png'],
-        creator: '@yourtwitterhandle'
+        creator: '@aicentral'
     },
     robots: {
         index: true,

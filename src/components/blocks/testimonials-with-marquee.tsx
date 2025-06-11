@@ -10,9 +10,16 @@ interface TestimonialsSectionProps {
         href?: string;
     }>;
     className?: string;
+    descriptionClassName?: string;
 }
 
-export function TestimonialsSection({ title, description, testimonials, className }: TestimonialsSectionProps) {
+export function TestimonialsSection({
+    title,
+    description,
+    testimonials,
+    className,
+    descriptionClassName
+}: TestimonialsSectionProps) {
     return (
         <section className={cn('bg-background text-foreground', 'px-0 py-12 sm:py-24 md:py-32', className)}>
             <div className='max-w-container mx-auto flex flex-col items-center gap-4 text-center sm:gap-16'>
@@ -20,7 +27,13 @@ export function TestimonialsSection({ title, description, testimonials, classNam
                     <h2 className='max-w-[720px] text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight'>
                         {title}
                     </h2>
-                    <p className='text-md text-muted-foreground max-w-[600px] font-medium sm:text-xl'>{description}</p>
+                    <p
+                        className={cn(
+                            'text-md text-muted-foreground max-w-[600px] font-medium sm:text-xl',
+                            descriptionClassName
+                        )}>
+                        {description}
+                    </p>
                 </div>
 
                 <div className='relative flex w-full flex-col items-center justify-center overflow-hidden'>
