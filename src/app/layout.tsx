@@ -1,22 +1,18 @@
 import type { ReactNode } from 'react';
 
 import type { Metadata, Viewport } from 'next';
-import localFont from 'next/font/local';
+import { Noto_Sans } from 'next/font/google';
 
 import { ThemeProvider } from 'next-themes';
 
 import '@/app/globals.css';
 import { MobileNavigation } from '@/components/MobileNavigation';
 
-const geistSans = localFont({
-    src: './fonts/GeistVF.woff',
-    variable: '--font-geist-sans',
-    weight: '100 900'
-});
-const geistMono = localFont({
-    src: './fonts/GeistMonoVF.woff',
-    variable: '--font-geist-mono',
-    weight: '100 900'
+const notoSans = Noto_Sans({
+    subsets: ['latin'],
+    variable: '--font-noto-sans',
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    display: 'swap'
 });
 
 // Enhanced metadata configuration for better SEO
@@ -85,7 +81,7 @@ const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
         // ? https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
         // ? https://react.dev/reference/react-dom/client/hydrateRoot#suppressing-unavoidable-hydration-mismatch-errors
         <html suppressHydrationWarning lang='en'>
-            <body className={`${geistSans.variable} ${geistMono.variable} text-foreground bg-[#0A0A0A] antialiased`}>
+            <body className={`${notoSans.variable} font-sans antialiased`}>
                 <ThemeProvider attribute='class'>
                     <MobileNavigation />
                     <main>{children}</main>
