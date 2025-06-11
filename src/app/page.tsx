@@ -1,10 +1,11 @@
 import BlogCarousel from '@/components/BlogCarousel';
 import { CodingComparison } from '@/components/CodingComparison';
+import { ContentSection } from '@/components/ContentSection';
 import { type CourseCard, CourseCards } from '@/components/CourseCards';
-import { Hero } from '@/components/Hero';
-import { InfiniteMovingCardsDemo } from '@/components/infinite-moving-cards-demo';
+import { HeroSection } from '@/components/HeroSection';
 import { Pricing } from '@/components/pricing';
 import type { PricingPlan } from '@/components/pricing';
+import { TestimonialsDemo } from '@/components/testimonials-demo';
 
 // Course data
 const courses: CourseCard[] = [
@@ -71,27 +72,42 @@ export default function Page() {
     return (
         <main className='min-h-screen'>
             {/* Hero Section */}
-            <Hero />
+            <HeroSection
+                title='Become a smarter AI builder in 10 minutes per week.'
+                description='Join 62k+ readers of AI Central Weekly and receive one actionable email each week to help you master AI coding, AI agents, and launch a SaaS from zero, focusing only on the essentials every entrepreneur should know.'
+                logos={[
+                    {
+                        name: 'TypeScript',
+                        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'
+                    },
+                    {
+                        name: 'React',
+                        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+                    },
+                    {
+                        name: 'Next.js',
+                        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+                    },
+                    {
+                        name: 'Node.js',
+                        image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+                    }
+                ]}
+            />
 
             {/* Coding Comparison Section */}
             <CodingComparison />
 
             {/* Content Container */}
             <div className='flex flex-col items-center justify-center p-6 sm:p-12 md:p-24'>
-                {/* Infinite Moving Cards Testimonials Section */}
-                <section className='mt-16 w-full'>
-                    <div className='mb-8 text-center'>
-                        <h2 className='mb-4 text-3xl font-bold'>What People Are Saying</h2>
-                        <p className='text-lg text-gray-600 dark:text-gray-400'>
-                            Incididunt consectetur amet aliqua velit tempor deserunt labore culpa nulla ipsum incididunt
-                            labore.
-                        </p>
-                    </div>
-                    <InfiniteMovingCardsDemo />
-                </section>
+                {/* Content Section */}
+                <ContentSection />
+
+                {/* Testimonials with Marquee Section */}
+                <TestimonialsDemo />
 
                 {/* Course Cards Section */}
-                <section className='mt-16 w-full'>
+                <section id='courses' className='mt-16 w-full'>
                     <div className='mb-8 text-center'>
                         <h2 className='mb-4 text-3xl font-bold'>Featured Courses</h2>
                         <p className='text-lg text-gray-600 dark:text-gray-400'>

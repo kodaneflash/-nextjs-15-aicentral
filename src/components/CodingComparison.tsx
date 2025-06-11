@@ -15,44 +15,28 @@ const ComparisonCard: React.FC<ComparisonCardProps> = ({ title, items, variant, 
     return (
         <div
             className={`flex flex-col rounded-2xl border ${
-                isEmployee ? 'border-red-500/30' : 'border-green-500/30'
-            } shadow-lg transition-all dark:shadow-xl`}>
-            {/* Outer gradient wrapper */}
-            <div
-                className={`h-full rounded-2xl p-1 ${
-                    isEmployee
-                        ? 'bg-[linear-gradient(to_right_bottom,_oklch(0.745_0.135_12.175_/_0.1)_0px,_oklch(0.745_0.135_12.175_/_0.15)_50%,_oklch(0.745_0.135_12.175_/_0.2)_100%)]'
-                        : 'bg-[linear-gradient(to_right_bottom,_oklch(0.803_0.135_142.495_/_0.1)_0px,_oklch(0.803_0.135_142.495_/_0.15)_50%,_oklch(0.803_0.135_142.495_/_0.2)_100%)]'
-                }`}>
-                {/* Inner content area */}
-                <div
-                    className={`flex h-full flex-col rounded-xl p-8 ${
-                        isEmployee
-                            ? 'bg-[oklch(0.745_0.135_12.175_/_0.05)] backdrop-blur-sm'
-                            : 'bg-[oklch(0.803_0.135_142.495_/_0.05)] backdrop-blur-sm'
-                    }`}>
-                    <div className='mb-6 flex items-center justify-between'>
-                        <h3
-                            className={`text-xl font-semibold ${isEmployee ? brandColors.engineer.text : brandColors.entrepreneur.text}`}>
-                            {title}
-                        </h3>
-                        {icon}
-                    </div>
-
-                    <ul className='space-y-4'>
-                        {items.map((item, index) => (
-                            <li key={index} className='flex items-start gap-3'>
-                                <span
-                                    className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full ${
-                                        isEmployee ? 'bg-red-400' : 'bg-green-400'
-                                    }`}
-                                />
-                                <span className='leading-relaxed text-gray-300'>{item}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                isEmployee ? 'border-red-500/30 bg-red-950/20' : 'border-green-500/30 bg-green-950/20'
+            } p-8`}>
+            <div className='mb-6 flex items-center justify-between'>
+                <h3
+                    className={`text-xl font-semibold ${isEmployee ? brandColors.engineer.text : brandColors.entrepreneur.text}`}>
+                    {title}
+                </h3>
+                {icon}
             </div>
+
+            <ul className='space-y-4'>
+                {items.map((item, index) => (
+                    <li key={index} className='flex items-start gap-3'>
+                        <span
+                            className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full ${
+                                isEmployee ? 'bg-red-400' : 'bg-green-400'
+                            }`}
+                        />
+                        <span className='leading-relaxed text-gray-300'>{item}</span>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
@@ -95,7 +79,7 @@ export const CodingComparison: React.FC = () => {
     const entrepreneurItems = ['Learn only the fundamentals', 'Use AI to code for you', 'Keep learning on the fly'];
 
     return (
-        <section className='px-6 py-24 text-white md:py-32 lg:py-48'>
+        <section className='bg-[oklch(0.145_0_0)] px-6 py-24 text-[oklch(0.985_0_0)] md:py-32 lg:py-48'>
             <div className='mx-auto max-w-6xl text-center'>
                 <h2 className='font-noto-sans mx-auto mb-16 max-w-4xl text-5xl leading-[60px] font-extrabold md:mb-20 md:text-[48px]'>
                     Coding courses are designed for{' '}

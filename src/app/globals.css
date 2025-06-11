@@ -60,6 +60,26 @@
     --radius-lg: var(--radius);
 
     --radius-xl: calc(var(--radius) + 4px);
+
+    --animate-marquee: marquee var(--duration) linear infinite;
+
+    --color-brand-foreground: var(----brand-foreground);
+
+    --color-brand: var(----brand);
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+}
+
+/* Custom utilities for testimonials */
+@utility max-w-container {
+    max-width: 1280px;
 }
 
 :root {
@@ -95,6 +115,8 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --brand: hsl(266 100% 50%);
+    --brand-foreground: hsl(270 100% 98%);
 }
 
 .dark {
@@ -129,6 +151,8 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+    --brand: hsl(266 70% 60%);
+    --brand-foreground: hsl(270 100% 98%);
 }
 
 @layer base {
@@ -137,5 +161,21 @@
     }
     body {
         @apply bg-background text-foreground font-sans;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    .text-clean-subtext {
+        @apply text-muted-foreground mx-auto max-w-lg py-4 text-center text-[18px] leading-7 font-light;
+        @apply lg:text-[20px] lg:leading-8;
     }
 }
